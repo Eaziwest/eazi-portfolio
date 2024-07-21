@@ -1,10 +1,11 @@
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 // components
 import Header from "@/components/ui/Header";
-import pagetrans from "@/components/pagetrans";
-import staireff from "@/components/StairEff";
+import Pagetrans from "@/components/pagetrans";
+import Staireff from "@/components/StairEff";
 
 const JetBrainsMono = JetBrains_Mono({ 
   subsets: ["latin"], 
@@ -20,10 +21,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <title>My Next.js App</title>
+      </head>
       <body className={JetBrainsMono.variable}>
         <Header />
-        <staireff />
-        <pagetrans>{children}</pagetrans>
+        <Staireff />
+        <Pagetrans>{children}</Pagetrans>
+        <SpeedInsights />
       </body>
     </html>
   );
