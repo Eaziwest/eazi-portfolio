@@ -5,7 +5,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 // components
 import Header from "@/components/ui/Header";
 import Pagetrans from "@/components/pagetrans";
-import Staireff from "@/components/StairEff";
+import LoadingEff from "@/components/StairEff";
 
 const JetBrainsMono = JetBrains_Mono({ 
   subsets: ["latin"], 
@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className={JetBrainsMono.variable}>
         <Header />
-        <Staireff />
+        <LoadingEff />
         <Pagetrans>{children}</Pagetrans>
         <SpeedInsights />
       </body>

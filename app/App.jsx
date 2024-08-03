@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Analytics } from "@vercel/analytics/react";
 import HomePage from './HomePage';
 import AboutPage from './AboutPage';
+import StairEff from '@/components/StairEff';
+
 
 function App() {
   return (

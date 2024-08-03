@@ -1,47 +1,65 @@
-import { animate, easeInOut, motion } from "framer-motion";
-import StairEff from "./StairEff";
+// src/Stairs.jsx
+import { motion } from "framer-motion";
+import React from "react";
 
 const stairAnimation = {
-    initial: {
-        top: "0%",
-    },
-    animate: {
-        top: "100%",
-    },
-    exit: {
-        top: ["100%", "0%"],
-    }
-};
-
-const reverseIndex = (index) => {
-    const totalSteps = 6;
-    return totalSteps - index - 1;
+  initial: {
+    y: 0,
+    opacity: 1,
+  },
+  animate: {
+    y: [0, -30, 15, -15, 0], // Bounce effect
+    opacity: [1, 1, 1, 1, 0], // Fade out effect
+  },
+  exit: {
+    opacity: 0,
+  },
 };
 
 const Stairs = () => {
-    return (
-        <>
-            {/* render 6 motion divs, each representing a step of the stairs. */}
-            {[...Array(6)].map((_, index) => {
-                console.log(`Rendering step ${index}`);
-                return (
-                    <motion.div 
-                        key={index} 
-                        variants={stairAnimation} 
-                        initial="initial" 
-                        animate="animate" 
-                        exit="exit" 
-                        transition={{
-                            duration: 0.4,
-                            ease: 'easeInOut',
-                            delay: reverseIndex(index) * 0.1,
-                        }}                                              
-                        className="h-full w-full bg-white relative"
-                    />
-                );
-            })}
-        </>
-    );
+  const initials = ["E", "A", "Z", "I"]; // Initials to display
+
+  return (
+    <div className="initials-container">
+      {initials.map((char, index) => (
+        <motion.div
+          key={index}
+          variants={stairAnimation}
+          initial="initial"
+          animate="animate"
+          exit="exit"
+          transition={{
+            duration: 1.5,
+            ease: "easeInOut",
+            delay: index * 0.3, // Stagger the animation
+          }}
+          style={{
+            fontSize: "3rem", // Adjust font size as needed
+            fontWeight: "bold", // Adjust font weight as needed
+            color: "white",
+            margin: "0 10px",
+          }}
+        >
+          {char}
+        </motion.div>
+      ))}
+      <style>
+        {`
+          body {
+            margin: 0;
+            background-color: #282c34;
+          }
+          .initials-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+          }
+        `}
+      </style>
+    </div>
+  );
 };
 
 export default Stairs;

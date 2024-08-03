@@ -1,0 +1,24 @@
+/* src/StairEff.css */
+body {
+    margin: 0;
+    background-color: #282c34;
+  }
+  
+  .loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #282c34;
+    pointer-events: none;
+  }
+  

@@ -2,11 +2,13 @@
 
 import { AnimatePresence, motion, easeInOut } from "framer-motion";
 import { usePathname } from "next/navigation";
-import Stairs from "./Stairs";
+import Stairs from "./Stairs"; // Adjust the import path if needed
+import "./StairEff.css"; // Import the CSS file
 
 const StairEff = () => {
     const pathname = usePathname();
     console.log("Current pathname:", pathname); // Debugging line
+
     return (
         <>
             <AnimatePresence mode="wait">
@@ -19,7 +21,7 @@ const StairEff = () => {
                         initial={{ opacity: 1 }} 
                         animate={{ 
                             opacity: 0, 
-                            transition: { delay: 1, duration: 0.4, ease: easeInOut },
+                            transition: { delay: 2, duration: 0.4, ease: easeInOut },
                         }}
                     />
                 </div>
@@ -28,4 +30,4 @@ const StairEff = () => {
     );
 };
 
-export default StairEff; 
+export default StairEff;
