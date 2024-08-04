@@ -1,4 +1,3 @@
-// src/Stairs.jsx
 import { motion } from "framer-motion";
 import React from "react";
 
@@ -16,7 +15,7 @@ const stairAnimation = {
   },
 };
 
-const Stairs = () => {
+const Initials = () => {
   const initials = ["E", "A", "Z", "I"]; // Initials to display
 
   return (
@@ -67,4 +66,4 @@ const Stairs = () => {
   );
 };
 
-export default Stairs;
+export default Initials;

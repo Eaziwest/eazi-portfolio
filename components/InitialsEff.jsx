@@ -1,12 +1,11 @@
-// src/StairEff.jsx
 "use client";
 
 import { AnimatePresence, motion, easeInOut } from "framer-motion";
 import { usePathname } from "next/navigation";
 import Stair from "./Initials"; // Adjust the import path if needed
-import "./StairEff.css"; // Import the CSS file
+import "./InitialsEff.css"; // Import the CSS file
 
-const StairEff = () => {
+const InitialsEff = () => {
     const pathname = usePathname();
     console.log("Current pathname:", pathname); // Debugging line
 
@@ -33,4 +32,4 @@ const StairEff = () => {
     );
 };
 
-export default StairEff;
+export default InitialsEff;

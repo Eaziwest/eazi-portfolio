@@ -5,7 +5,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 // components
 import Header from "@/components/ui/Header";
 import Pagetrans from "@/components/pagetrans";
-import LoadingEff from "@/components/StairEff";
+import LoadingEff from "@/components/InitialsEff";
 
 const JetBrainsMono = JetBrains_Mono({ 
   subsets: ["latin"], 
