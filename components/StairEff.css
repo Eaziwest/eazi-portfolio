@@ -1,24 +1,26 @@
 /* src/StairEff.css */
 body {
-    margin: 0;
-    background-color: #282c34;
-  }
-  
-  .loading-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden;
-  }
-  
-  .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #282c34;
-    pointer-events: none;
-  }
-  
+  margin: 0;
+  background-color: #282c34;
+}
+
+.initials-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.initials {
+  font-size: 3rem; /* Adjust font size as needed */
+  font-weight: bold; /* Adjust font weight as needed */
+  color: white;
+  margin: 0 10px; /* Space between letters */
+  position: relative; /* Position for animation */
+}
