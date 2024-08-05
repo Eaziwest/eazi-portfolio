@@ -1,26 +1,31 @@
 "use client";
 
-import { FaJs, FaReact, FaNodeJs, FaDocker, FaDatabase } from "react-icons/fa";
+import { FaJs, FaReact, FaNodeJs, FaDatabase, FaUniversity, FaBriefcase } from "react-icons/fa";
 import { BiShield } from "react-icons/bi";
 import { FiLock, FiBarChart } from "react-icons/fi";
 import { RiSecurePaymentLine } from 'react-icons/ri';
-import { AiOutlineAreaChart } from 'react-icons/ai';
+import { AiOutlineAreaChart, AiOutlineInfoCircle } from 'react-icons/ai';
 import { MdInsights } from 'react-icons/md';
-import { SiTailwindcss, SiNextdotjs, SiJenkins, SiKubernetes, SiMysql, SiMongodb } from "react-icons/si";
+import { SiTailwindcss, SiNextdotjs, SiMysql } from "react-icons/si";
 
 const about = {
     title: 'About me',
     description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias quae molestias harum ex ullam quas deleniti et soluta tenetur dicta doloremque odio quibusdam eos assumenda, delectus ad amet repellat corporis.',
     info: [
-        { fieldName: "Name", fieldValue: "Israel Oluwatobi-Abraham" },
-        { fieldName: "Phone", fieldValue: "(+234) 70 4072 1151 || (+234) 91 5857 6069" },
+        { fieldName: "Name", fieldValue: "Israel OLUWATOBI-ABRAHAM" },
+        { fieldName: "Phone", fieldValue: (
+            <>
+                <a href="tel:+2349158576069" className="text-accent"> (+234) 915-857-6069</a>
+            </>
+        )},
+        { fieldName: "Email", fieldValue: <a href="mailto:israeleazi2876@gmail.com" className="text-accent">israeleazi2876@gmail.com</a> },
         { fieldName: "Experience", fieldValue: "2 Years" },
         { fieldName: "Language", fieldValue: "English and Yoruba" },
         { fieldName: "Nationality", fieldValue: "Nigerian" },
-        { fieldName: "Email", fieldValue: "israeleazi2876@gmail.com" },
         { fieldName: "Freelance", fieldValue: "Available" }
     ]
 };
+
 
 const experience = {
     title: 'My Experience',
@@ -82,10 +87,10 @@ const Resume = () => {
             <div className="container mx-auto">
                 <Tabs defaultValue="experience" className="flex flex-col xl:flex-row gap-[60px]">
                     <TabsList className="flex flex-col w-full max-w-[388px] mx-auto xl:mx-0 gap-6">
-                        <TabsTrigger value="experience">Experience</TabsTrigger>
-                        <TabsTrigger value="education">Education</TabsTrigger>
-                        <TabsTrigger value="skills">Skills</TabsTrigger>
-                        <TabsTrigger value="about">About Me</TabsTrigger>
+                        <TabsTrigger value="experience"><FaBriefcase className="inline-block mr-2" />Experience</TabsTrigger>
+                        <TabsTrigger value="education"><FaUniversity className="inline-block mr-2" />Education</TabsTrigger>
+                        <TabsTrigger value="skills"><FaJs className="inline-block mr-2" />Skills</TabsTrigger>
+                        <TabsTrigger value="about"><AiOutlineInfoCircle className="inline-block mr-2" />About Me</TabsTrigger>
                     </TabsList>
                     <div className="min-h-[70vh] w-full">
                         <TabsContent value="experience" className="w-full">
@@ -173,8 +178,8 @@ const Resume = () => {
                                 <ul>
                                     {about.info.map((item, index)=> {
                                         return (
-                                            <li>
-                                                <span>{item.fieldName}</span>
+                                            <li key={index} className="flex justify-between py-2">
+                                                <span className="font-semibold">{item.fieldName}:</span>
                                                 <span>{item.fieldValue}</span>
                                             </li>
                                         )
