@@ -10,7 +10,7 @@ import Stats from "@/components/Stats";
 const downloadCv = () => {
   const link = document.createElement('a');
   link.href = '/assets/OLUWATOBI-ABRAHAM_ISRAEL_TEMILOLUWA_RESUME1.pdf';
-  link.download = 'Israel_Resume.pdf';
+  link.download = 'Israel_CV.pdf';
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);

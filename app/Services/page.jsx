@@ -1,36 +1,37 @@
 "use client";
 
 import { BsArrowDownRight } from 'react-icons/bs';
+import { FaShieldAlt, FaCogs, FaChartBar, FaDatabase, FaReact } from 'react-icons/fa';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 const services = [
     {
-        num: '01',
+        icon: <FaShieldAlt className='text-red-600 text-8xl' />, // Red color for Cyber-Security
         title: 'Cyber-Security',
         description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, dolor. Alias, qui laudantium quos veritatis cupiditate consequatur.',
         href: ""
     },
     {
-        num: '02',
-        title: 'Devops',
+        icon: <FaCogs className='text-green-600 text-8xl' />, // Green color for Devops
+        title: 'DevOps',
         description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, dolor. Alias, qui laudantium quos veritatis cupiditate consequatur.',
         href: ""
     },
     {
-        num: '03',
+        icon: <FaChartBar className='text-blue-600 text-8xl' />, // Blue color for Data Analytics
         title: 'Data Analytics',
         description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, dolor. Alias, qui laudantium quos veritatis cupiditate consequatur.',
         href: ""
     },
     {
-        num: '04',
+        icon: <FaDatabase className='text-purple-600 text-8xl' />, // Purple color for Database Administrator
         title: 'Database Administrator',
         description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, dolor. Alias, qui laudantium quos veritatis cupiditate consequatur.',
         href: ""
     },
     {
-        num: '05',
+        icon: <FaReact className='text-cyan-600 text-8xl' />, // Cyan color for React Developer
         title: 'React Developer',
         description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, dolor. Alias, qui laudantium quos veritatis cupiditate consequatur.',
         href: ""
@@ -49,7 +50,7 @@ const Services = () => {
                         <div key={index} className='flex-1 flex flex-col justify-center gap-6 group'>
                             <div className='w-full flex justify-between items-center'>
                                 <div className='text-8xl font-extrabold text-outline text-transparent group-hover:text-outline-hover transition-all duration-500'>
-                                    {service.num}
+                                    {service.icon}
                                 </div>
                                 <Link href={service.href} className='w-[70px] h-[70px] rounded-full bg-white transition-all duration-500 flex justify-center items-center hover:-rotate-45'>
                                     <BsArrowDownRight className='text-primary text-5xl' />
