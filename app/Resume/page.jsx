@@ -3,7 +3,7 @@
 import { FaJs, FaReact, FaNodeJs, FaDatabase, FaUniversity, FaBriefcase } from "react-icons/fa";
 import { BiShield } from "react-icons/bi";
 import { FiLock, FiBarChart } from "react-icons/fi";
-import { RiSecurePaymentLine } from 'react-icons/ri';
+import { FaCertificate } from 'react-icons/fa';
 import { AiOutlineAreaChart, AiOutlineInfoCircle } from 'react-icons/ai';
 import { MdInsights } from 'react-icons/md';
 import { SiTailwindcss, SiNextdotjs, SiMysql } from "react-icons/si";
@@ -25,7 +25,6 @@ const about = {
         { fieldName: "Freelance", fieldValue: "Available" }
     ]
 };
-
 
 const experience = {
     title: 'My Experience',
@@ -72,6 +71,147 @@ const skills = {
     ]
 };
 
+const cert = {
+    title: "My Certifications",
+    description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo possimus, dolore itaque tempora nam rerum quae hic?',
+    skillList: [
+        {
+            title: "Introduction to critical infrastructure protection",
+            issuer: "OPSWAT Academy",
+            date: "May 2024 - May 2025",
+            credential_id: "dovJDjR5EA",
+            url: "https://learn.opswatacademy.com/certificate/dovJDjR5EA" 
+        },
+        {
+            title: "JPMorgan Chase & Co. - Software Engineering Lite Job Simulation",
+            issuer: "Forage",
+            date: "May 2024",
+            credential_id: "BbkaoAqBYCFtcH7GA",
+            url: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/J.P.%20Morgan/Wb4yEmHvZrC2qxiyX_JPMorgan%20Chase%20&%20Co._yFWSXkZZCyi7viMnT_1715761652548_completion_certificate.pdf" 
+        },
+        {
+            title: "Verizon - Cloud Platform Job Simulation",
+            issuer: "Forage",
+            date: "May 2024",
+            credential_id: "pjdLW9eiQLuu8rgFo",
+            description: "",
+            url: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Verizon%20Communications%20Inc./aNJGnRtgfiK5fQqcR_Verizon_yFWSXkZZCyi7viMnT_1715518495423_completion_certificate.pdf" 
+        },
+        {
+            title: "OPSWAT Cybersecurity Fundamentals Associate",
+            issuer: "OPSWAT Academy",
+            date: "April 2024",
+            credential_id: "XTaZltjQCg",
+            description: "",
+            url: "https://learn.opswatacademy.com/certificate/XTaZltjQCg" 
+        },
+        {
+            title: "Macro Expert",
+            issuer: "LetsDefend",
+            date: "October 2023",
+            //credential_id: "pjdLW9eiQLuu8rgFo",
+            description: "",
+            url: "https://app.letsdefend.io/my-badges/detail/27e6ccf7-edd5-4af7-90ca-e4ab93060b28" 
+        },
+        {
+            title: "Phishing Analyzer",
+            issuer: "LetsDefend",
+            date: "October 2023",
+            //credential_id: "pjdLW9eiQLuu8rgFo",
+            description: "",
+            url: "https://app.letsdefend.io/my-badges/detail/d6995335-4496-4217-b73a-077181fdccff" 
+        },
+        {
+            title: "PowerShell Script",
+            issuer: "LetsDefend",
+            date: "October 2023",
+            //credential_id: "pjdLW9eiQLuu8rgFo",
+            description: "",
+            url: "https://app.letsdefend.io/my-badges/detail/81497dd4-1132-4d97-9e57-7480c47c492c" 
+        },
+        {
+            title: "SOC Member",
+            issuer: "LetsDefend",
+            date: "October 2023",
+            //credential_id: "pjdLW9eiQLuu8rgFo",
+            description: "",
+            url: "https://app.letsdefend.io/my-badges/detail/def4ff6a-22cd-4a7a-abe4-79d2c695f2f5" 
+        },
+        {
+            title: "Suspicious File Finder",
+            issuer: "LetsDefend",
+            date: "October 2023",
+            //credential_id: "pjdLW9eiQLuu8rgFo",
+            description: "",
+            url: "https://app.letsdefend.io/my-badges/detail/af50b325-d40b-4b24-9b2b-20c385bde120" 
+        },
+        {
+            title: "accelerated jobberman soft skills trainig",
+            issuer: "Jobberman Nigeria",
+            date: "October 2023",
+            credential_id: "o5ijlt2kt3",
+            description: "",
+            url: "https://jobbermansoftskills.thinkific.com/certificates/o5ijlt2kt3" 
+        },
+        {
+            title: "Fortinet Network Security Expert Level 1: Certified Associate",
+            issuer: "Fortinet",
+            date: "September 2023 - September 2025",
+            credential_id: "PPhcROihpl",
+            description: "",
+            url: "https://training.fortinet.com/mod/customcert/verify_certificate.php?contextid=251439&code=PPhcROihpI&qrcode=1"
+        },
+        {
+            title: "Fortinet Network Security Expert Level 2: Certified Associate",
+            issuer: "Fortinet",
+            date: "September 2023 - September 2025",
+            credential_id: "c6NBCOUBFq",
+            description: "",
+            url: "https://training.fortinet.com/mod/customcert/verify_certificate.php?contextid=251440&code=c6NBCOUBFq&qrcode=1" 
+        },
+        {
+            title: "Fortinet Network Security Expert Level 3: Certified Associate",
+            issuer: "Fortinet",
+            date: "September 2023 - September 2025",
+            credential_id: "L7oVStyMH9",
+            description: "",
+            url: "https://training.fortinet.com/mod/customcert/verify_certificate.php?contextid=251441&code=L7oVStyMH9&qrcode=1" 
+        },
+        {
+            title: "Network Monitoring Basics",
+            issuer: "Udemy",
+            date: "September 2023",
+            credential_id: "UC-5757b548-c459-4ec0-ae46-fa52fcf9c041",
+            description: "",
+            url: "https://www.udemy.com/certificate/UC-5757b548-c459-4ec0-ae46-fa52fcf9c041/" 
+        },
+        {
+            title: "PowerShell Basics",
+            issuer: "Udemy",
+            date: "September 2023",
+            credential_id: "UC-65ccb74a-7249-4dd6-a0e9--1e9af9957c0f",
+            description: "",
+            url: "https://www.udemy.com/certificate/UC-65ccb7a4-7249-4dd6-a0e9-1e9af9957c0f/" 
+        },
+        {
+            title: "Windows Command Line Basics",
+            issuer: "Udemy",
+            date: "September 2023",
+            credential_id: "UC-b93cf77b-f7cd-4211-ac76-049a17a59ff2",
+            description: "",
+            url: "https://www.udemy.com/certificate/UC-b93cf77b-f7cd-4211-ac76-049a17a59ff2/" 
+        },
+        {
+            title: "Certified Secure Computer User v2",
+            issuer: "EC-Council",
+            date: "August 2021",
+            credential_id: "ECC0876953142",
+            description: "",
+            url: "https://aspen.eccouncil.org/VerifyBadge?type=certification&a=69A8qVByzvfq2eQnwPMrHYADyJlMjpUk/NF0edqz50c=" 
+        }
+    ]
+};
+
 import { Tabs, TabsContent, TabsTrigger, TabsList } from '@/components/ui/tabs';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -91,6 +231,7 @@ const Resume = () => {
                         <TabsTrigger value="education"><FaUniversity className="inline-block mr-2" />Education</TabsTrigger>
                         <TabsTrigger value="skills"><FaJs className="inline-block mr-2" />Skills</TabsTrigger>
                         <TabsTrigger value="about"><AiOutlineInfoCircle className="inline-block mr-2" />About Me</TabsTrigger>
+                        <TabsTrigger value="cert"><FaCertificate className="inline-block mr-2" />Licenses & Certification</TabsTrigger>
                     </TabsList>
                     <div className="min-h-[70vh] w-full">
                         <TabsContent value="experience" className="w-full">
@@ -187,6 +328,41 @@ const Resume = () => {
                                 </ul>
                             </div>
                         </TabsContent>
+                        <TabsContent value="cert" className="w-full">
+      <div className="flex flex-col gap-[30px] text-center xl:text-left">
+        <h3 className="text-4xl font-bold">
+          {cert.title}
+        </h3>
+        <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+          {cert.description}
+        </p>
+        <ScrollArea className="h-[400px]">
+          <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+            {cert.skillList.map((item, index) => (
+              <li
+                key={index}
+                className="bg-[#232329] h-[210px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+              >
+                <span className="text-accent text-xl">{item.issuer}</span>
+                <h3 className="text-xl max-w-[250px] min-h-[60px] text-center">{item.credential_id}</h3>
+                <a
+                  href={item.url}
+                  className="text-accent"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Certificate
+                </a>
+                <div className="flex items-center gap-3">
+                  <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
+                  <p className="text-white/60">{item.date}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </ScrollArea>
+      </div>
+    </TabsContent>
                     </div>
                 </Tabs>
             </div>

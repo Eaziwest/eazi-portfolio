@@ -30,7 +30,8 @@ const Initials = () => {
           transition={{
             duration: 1.5,
             ease: "easeInOut",
-            delay: index * 0.3, // Stagger the animation
+            delay: index * 0.3,
+            repeatType: "loop",
           }}
           style={{
             fontSize: "3rem", // Adjust font size as needed
