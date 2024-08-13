@@ -229,9 +229,9 @@ const Resume = () => {
                     <TabsList className="flex flex-col w-full max-w-[388px] mx-auto xl:mx-0 gap-6">
                         <TabsTrigger value="experience"><FaBriefcase className="inline-block mr-2" />Experience</TabsTrigger>
                         <TabsTrigger value="education"><FaUniversity className="inline-block mr-2" />Education</TabsTrigger>
+                        <TabsTrigger value="cert"><FaCertificate className="inline-block mr-2" />Licenses & Certification</TabsTrigger>
                         <TabsTrigger value="skills"><FaJs className="inline-block mr-2" />Skills</TabsTrigger>
                         <TabsTrigger value="about"><AiOutlineInfoCircle className="inline-block mr-2" />About Me</TabsTrigger>
-                        <TabsTrigger value="cert"><FaCertificate className="inline-block mr-2" />Licenses & Certification</TabsTrigger>
                     </TabsList>
                     <div className="min-h-[70vh] w-full">
                         <TabsContent value="experience" className="w-full">
@@ -282,6 +282,41 @@ const Resume = () => {
                                 </ScrollArea>
                             </div>
                         </TabsContent>
+                        <TabsContent value="cert" className="w-full">
+      <div className="flex flex-col gap-[30px] text-center xl:text-left">
+        <h3 className="text-4xl font-bold">
+          {cert.title}
+        </h3>
+        <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+          {cert.description}
+        </p>
+        <ScrollArea className="h-[400px]">
+          <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+            {cert.skillList.map((item, index) => (
+              <li
+                key={index}
+                className="bg-[#232329] h-[210px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+              >
+                <span className="text-accent text-xl">{item.issuer}</span>
+                <h3 className="text-xl max-w-[250px] min-h-[60px] text-center">{item.credential_id}</h3>
+                <a
+                  href={item.url}
+                  className="text-accent"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Certificate
+                </a>
+                <div className="flex items-center gap-3">
+                  <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
+                  <p className="text-white/60">{item.date}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </ScrollArea>
+      </div>
+    </TabsContent>
                         <TabsContent value="skills" className="w-full h-full">
                             <div className="flex flex-col gap-[30px]">
                                 <div className="flex flex-col gap-[30px] text-center xl:text-left">
@@ -328,41 +363,6 @@ const Resume = () => {
                                 </ul>
                             </div>
                         </TabsContent>
-                        <TabsContent value="cert" className="w-full">
-      <div className="flex flex-col gap-[30px] text-center xl:text-left">
-        <h3 className="text-4xl font-bold">
-          {cert.title}
-        </h3>
-        <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
-          {cert.description}
-        </p>
-        <ScrollArea className="h-[400px]">
-          <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
-            {cert.skillList.map((item, index) => (
-              <li
-                key={index}
-                className="bg-[#232329] h-[210px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
-              >
-                <span className="text-accent text-xl">{item.issuer}</span>
-                <h3 className="text-xl max-w-[250px] min-h-[60px] text-center">{item.credential_id}</h3>
-                <a
-                  href={item.url}
-                  className="text-accent"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  View Certificate
-                </a>
-                <div className="flex items-center gap-3">
-                  <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
-                  <p className="text-white/60">{item.date}</p>
-                </div>
-              </li>
-            ))}
-          </ul>
-        </ScrollArea>
-      </div>
-    </TabsContent>
                     </div>
                 </Tabs>
             </div>
