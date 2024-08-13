@@ -56,18 +56,16 @@ const skills = {
     title: "My Skills",
     description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo possimus, dolore itaque tempora nam rerum quae hic?',
     skillList: [
-        { icon: <BiShield className="text-purple-500" />, name: "Bi Shield" },
-        { icon: <FaJs className="text-yellow-500" />, name: "JavaScript" },
-        { icon: <FaReact className="text-blue-500" />, name: "React" },
-        { icon: <FaNodeJs className="text-green-500" />, name: "Node.js" },
-        { icon: <SiTailwindcss className="text-teal-500" />, name: "Tailwind CSS" },
-        { icon: <SiNextdotjs className="text-gray-800" />, name: "Next.js" },
-        { icon: <FiLock className="text-gray-500" />, name: "Cybersecurity" },
-        { icon: <FiBarChart className="text-blue-400" />, name: "Data Analysis" },
-        { icon: <AiOutlineAreaChart className="text-orange-500" />, name: "Area Chart" },
-        { icon: <MdInsights className="text-indigo-500" />, name: "Insights" },
-        { icon: <FaDatabase className="text-purple-600" />, name: "Database" },
-        { icon: <SiMysql className="text-blue-500" />, name: "MySQL" }
+        { icon: <BiShield className="text-purple-500" />, name: "CyberShield", url: "https://www.cybershield.org/en/" },
+        { icon: <FaJs className="text-yellow-500" />, name: "JavaScript", url: "https://www.netacad.com/courses/programming/javascript-essentials-1" },
+        { icon: <FaReact className="text-blue-500" />, name: "React", url: "https://nextjs.org/" },
+        { icon: <FaNodeJs className="text-green-500" />, name: "Node.js", url: "https://www.simplilearn.com/tutorials/nodejs-tutorial/what-is-nodejs" },
+        { icon: <SiTailwindcss className="text-teal-500" />, name: "Tailwind CSS", url: "https://nextjs.org/" },
+        { icon: <SiNextdotjs className="text-gray-800" />, name: "Next.js", url: "https://nextjs.org/" },
+        { icon: <FiLock className="text-gray-500" />, name: "Cybersecurity", url: "https://www.cisco.com/site/us/en/learn/topics/security/what-is-cybersecurity.html#:~:text=Cybersecurity%20is%20the%20practice%20of,or%20interrupting%20normal%20business%20processes." },
+        { icon: <FiBarChart className="text-blue-400" />, name: "Data Analysis", url: "https://www.simplilearn.com/data-analysis-methods-process-types-article" },
+        { icon: <FaDatabase className="text-purple-600" />, name: "Database", url: "https://www.simplilearn.com/tutorials/dbms-tutorial/what-is-a-database" },
+        { icon: <SiMysql className="text-blue-500" />, name: "MySQL", url: "https://www.hostinger.com/tutorials/what-is-mysql" }
     ]
 };
 
@@ -316,53 +314,35 @@ const Resume = () => {
           </ul>
         </ScrollArea>
       </div>
-    </TabsContent>
-                        <TabsContent value="skills" className="w-full h-full">
-                            <div className="flex flex-col gap-[30px]">
-                                <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                                    <h3 className="text-4xl font-bold">
-                                        {skills.title}
-                                    </h3>
-                                    <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
-                                        {skills.description}
-                                    </p>
+                        </TabsContent>
+                        <TabsContent value="skills">
+                    <section className="space-y-4">
+                        <h2 className="text-xl font-semibold">{skills.title}</h2>
+                        <p>{skills.description}</p>
+                        <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
+                            {skills.skillList.map((skill, index) => (
+                                <div key={index} className="flex items-center space-x-2 p-2 border rounded-md">
+                                    {skill.icon}
+                                    <a href={skill.url} className="text-accent" target="_blank" rel="noopener noreferrer">{skill.name}</a>
                                 </div>
-                                <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-                                    {skills.skillList.map((skills, index)=> {
-                                        return <li key={index}>
-                                            <TooltipProvider delayDuration={100}>
-                                                <Tooltip>
-                                                    <TooltipTrigger className="w-full h-[160px] bg-[#232329] rounded-xl flex justify-center items-center group ">
-                                                        <div className="text-6xl transition-all duration-300">
-                                                            {skills.icon}
-                                                        </div>
-                                                    </TooltipTrigger>
-                                                    <TooltipContent>
-                                                        <p>{skills.name}</p>
-                                                    </TooltipContent>
-                                                </Tooltip>
-                                            </TooltipProvider>
-                                            </li>;
-                                    })}
-                                </ul>
-                            </div>
-                        </TabsContent>
-                        <TabsContent value="about" className="w-full text-center xl:text-left">
-                            <div className="flex flex-col gap-[30px]">
-                                <h3 className="text-4xl font-bold">{about.title}</h3>
-                                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{about.description}</p>
-                                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
-                                    {about.info.map((item, index)=> {
-                                        return (
-                                            <li key={index} className="flex justify-between py-2">
-                                                <span className="text-white/60">{item.fieldName}:</span>
-                                                <span className="text-xl">{item.fieldValue}</span>
-                                            </li>
-                                        )
-                                    })}
-                                </ul>
-                            </div>
-                        </TabsContent>
+                            ))}
+                        </div>
+                    </section>
+                </TabsContent>
+                <TabsContent value="about">
+                    <section className="space-y-4">
+                        <h2 className="text-xl font-semibold">{about.title}</h2>
+                        <p>{about.description}</p>
+                        <ul>
+                            {about.info.map((item, index) => (
+                                <li key={index} className="flex justify-between border-b py-2">
+                                    <span className="font-medium">{item.fieldName}:</span>
+                                    <span>{item.fieldValue}</span>
+                                </li>
+                            ))}
+                        </ul>
+                    </section>
+                </TabsContent>
                     </div>
                 </Tabs>
             </div>

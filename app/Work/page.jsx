@@ -29,7 +29,7 @@ const projects = [
     },
     {
         icon: <FaCode className='text-blue-600 text-8xl' />,
-        category: 'Web Developer',
+        category: 'Fullstack',
         title: 'Web Developer',
         description: "Versatile developer with expertise in both frontend and backend technologies, capable of building complete web applications from scratch. Proficient in designing user interfaces with modern frameworks such as React or Angular, and skilled in creating robust server-side solutions using Node.js or similar technologies. Experienced in managing databases, integrating APIs, and ensuring seamless communication between frontend and backend components. Adept at using tools and practices for version control, deployment, and performance optimization. Committed to delivering high-quality, scalable solutions that meet user needs and business objectives.",
         stack: [
@@ -126,6 +126,24 @@ const Work = () => {
                         <div>{project.icon}</div>
                     </div>
                     <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">{project.category} projects</h2>
+                    <p className="text-white/60">{project.description}</p>
+                    <ul className="flex gap-4">
+                        {project.stack.map((item, index)=> {
+                            return <li key={index} className="text-xl text-accent">
+                                {item.name},
+                                {/* remove the last coma */}
+                                {index !== project.stack.length - 1 && ","}
+                            </li>
+                        })}
+                    </ul>
+                    <div className="border border-white/20"></div>
+                    <div>
+                        <link>
+                            <Tooltip>
+                                
+                            </Tooltip>
+                        </link>
+                    </div>
                 </div>
                 <div className="w-full xl:w-[50%]">slider</div>
             </div>
